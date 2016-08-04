@@ -1,0 +1,71 @@
+NOTE: You may add new queries with one entity type parameter or without any parameters by simple adding the SPARQL
+query to the "SparqlQueries.txt" file. After adding the new query to the file, restart the server and send your
+HTTP requests with the query name that you provided. Do not forget to add the query name and the "EndQuery" tag to this file.
+
+NOTE 2: Another way of adding new query (without restarting server) is to use /registerQuery operation as defined below. For
+Entity Type field, instead of writing the type of the attribute in the SPARQL query (e.g., instead of TempSensor), write
+"<???>" so that you can use this query type with all other entity types when necessary.
+
+Current queries supported: (Based on the SparqlQueries.txt file)
+
+GET SUBTYPES: (HTTP.GET)
+
+http://<ip_address+port>/query?request=getSubTypes&entityType=<entity_type>
+Example Use:
+http://localhost:8080/query?request=getSubTypes&entityType=Node
+
+GET SUPERTYPES: (HTTP.GET)
+
+http://<ip_address+port>/query?request=getSuperTypes&entityType=<entity_type>
+Example Use:
+http://localhost:8080/query?request=getSuperTypes&entityType=Sensor
+
+GET ATTRIBUTES: (HTTP.GET)
+
+http://<ip_address+port>/query?request=getAttributes&entityType=<entity_type>
+Example Use:
+http://localhost:8080/query?request=getAttributes&entityType=Sensor
+
+
+OTHER POSSIBLE QUERIES:
+
+REGISTER NEW QUERY:  (HTTP.POST)
+http://<ip_address+port>/registerquery
+
+NOTE: Post your SPARQL query as a JSON object with query and queryName fields
+that you want to save it in the database and use in your future possible requests. 
+
+Example Use:
+http://localhost:8080/registerquery
+Example Post JSON Data:
+{
+    "query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ngsi: <http://www.semanticweb.org/neclab/smartsantander/NGSI#>
+SELECT ?attribute WHERE {?attribute rdfs:subPropertyOf ngsi:hasAttribute .
+                                             ?attribute rdfs:domain ?type .
+			{ SELECT ?type WHERE {ngsi:<???> rdfs:subClassOf* ?type } }
+}",
+    "queryName": "helloWorld"
+}
+
+After posting this registerquery, you can start calling the new operation as below. 
+http://localhost:8080/query?request=helloWorld&entityType=TempSensor
+
+
+FORWARD SPARQL QUERY (HTTP.POST)
+
+http://<ip_address+port>/forward
+
+NOTE: Post your SPARQL query as a JSON object with "query" parameter
+
+Write your SPARQL query as the value of the query parameter. The SemantixEngine will forward your direct SPARQL
+request to the SPARQL server and return you a JSON response of your query result.
+
+This feature is added to be able to have single point of contact for both requests with or without knowledge of SPARQL.
+
+SUBSCRIPTION REQUEST
+
+
+
+

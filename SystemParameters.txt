@@ -1,0 +1,8 @@
+hsqldb_port 9001
+hsqldb_dbname mainDB
+hsqldb_username sa
+hsqldb_password  
+hsqldb_directory file:\C:\JavaWorkspace\SemantixEngine\SQL_database\mainDB
+sparql_port 3030
+sparql_URL http://localhost
+subscribe_time_interval_seconds 10
