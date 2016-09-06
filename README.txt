@@ -8,5 +8,5 @@ Steps to use the Semantix Engine:
 (included in \SemantixEngine\NGSI_Sparql_Examples folder)
 6- (Optional) Open SystemParameters.txt file and set the configurations as you wish 
 7- Clean and install Semantix Engine with Maven
-8- Run it as a SpringBoot app
+8- Run it as a SpringBoot app (mvn spring-boot:run)
 9- Check the ExampleQueries.txt file to try sample HTTP queries
