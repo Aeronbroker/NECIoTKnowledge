@@ -3,10 +3,27 @@ QueryName: getSubTypes
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ngsi: <http://www.semanticweb.org/neclab/smartsantander/NGSI#>
-SELECT ?type WHERE {?type rdfs:subClassOf* ngsi:<???>}
+SELECT ?type WHERE {?type rdfs:subClassOf ngsi:<???>}
 
 EndQuery
+QueryName: getAllSubTypes
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ngsi: <http://www.semanticweb.org/neclab/smartsantander/NGSI#>
+SELECT ?type WHERE {?type rdfs:subClassOf ngsi:<???>}
+
+EndQuery
+
 QueryName: getSuperTypes
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ngsi: <http://www.semanticweb.org/neclab/smartsantander/NGSI#>
+SELECT ?type WHERE {ngsi:<???> rdfs:subClassOf ?type}
+
+EndQuery
+QueryName: getAllSuperTypes
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -14,6 +31,7 @@ PREFIX ngsi: <http://www.semanticweb.org/neclab/smartsantander/NGSI#>
 SELECT ?type WHERE {ngsi:<???> rdfs:subClassOf* ?type}
 
 EndQuery
+
 QueryName: getAttributes
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
