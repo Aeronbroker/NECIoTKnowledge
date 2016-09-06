@@ -64,8 +64,13 @@ request to the SPARQL server and return you a JSON response of your query result
 
 This feature is added to be able to have single point of contact for both requests with or without knowledge of SPARQL.
 
-SUBSCRIPTION REQUEST
+SUBSCRIPTION REQUEST (HTTP.POST)
 
+http://<ip_address+port>/subscribe?request=getSubTypes&entityType=Sensor
 
+POST data: subscriberURL 
+
+You have to have a HTTP server in order to subscribe for a SPARQL query. 
+The subscription controller will send updates on change. (Check time interval= 1 minute)
 
 
