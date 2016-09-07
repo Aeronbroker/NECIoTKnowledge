@@ -24,17 +24,20 @@ public class KnowledgeServerApplication {
 	public static SystemParameters sp;
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		ApplicationContext ctx =  SpringApplication.run(KnowledgeServerApplication.class, args); 
+
 		setSystemParameters("SystemParameters.txt");
 		
+		ApplicationContext ctx =  SpringApplication.run(KnowledgeServerApplication.class, args); 
+
+		
+		// initialize cache
 		GlobalConfiguration globalConfig = new GlobalConfigurationBuilder()
 				  .globalJmxStatistics()
 				  .allowDuplicateDomains(true)
 				  .build();
-
 		DefaultCacheManager dcm = new DefaultCacheManager(globalConfig);
 		
-		// start DB server
+		// start DB server (HSQLDB)
 		new HyperSqlDbServer(sp);
 		
 		// Create connections to databases and cache
@@ -70,7 +73,7 @@ public class KnowledgeServerApplication {
 
 	public static void setSystemParameters(String s) throws FileNotFoundException{
         // set default values
-		String uname="sa", password="", hsqldb_port="9001", sparql_port="3030",  sparql_URL="http://localhost",dbname="mainDB", 
+		String uname="sa", password="", hsqldb_port="9001", sparql_port="3030", sparql_URL="http://localhost",dbname="mainDB", 
 				dir="file:\\C:\\SemantixEngine\\SQL_database\\mainDB";
         int maxCacheEntries=1000;
 		double subscribeTimeInterval=10;
@@ -105,9 +108,11 @@ public class KnowledgeServerApplication {
     		else if(tmp.equalsIgnoreCase("max_cache_entries")){
     			maxCacheEntries = Integer.parseInt(sc.next());
     		}
+
     	}
     
     	sp = new SystemParameters(hsqldb_port, sparql_port,sparql_URL, uname, password,dbname,dir,subscribeTimeInterval, maxCacheEntries);
     	sc.close();
     }
 }
+

@@ -30,6 +30,7 @@ public class SystemParameters {
 		this.max_cache_entries = maxCacheEntries;
 	}
 
+	
 	public String getHsqldb_port() {
 		return hsqldb_port;
 	}
@@ -65,8 +66,5 @@ public class SystemParameters {
 	public int getMax_cache_entries() {
 		return max_cache_entries;
 	}
-
-
-	
 	
 }

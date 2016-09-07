@@ -1,3 +1,4 @@
+knowledgeserver_port 8015
 hsqldb_port 9001
 hsqldb_dbname mainDB
 hsqldb_username sa
