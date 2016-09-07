@@ -10,4 +10,7 @@ Steps to use the Knowledge Base Server:
 7- Set the server port number in the "application.properties" file under /src/main/resources/
 8- Clean and install KnowledgeBaseServer with Maven
 9- Run it as a SpringBoot app (Run KnowledgeBaseApplication.java class --> main spring boot class)
-10- Check the ExampleQueries.txt file to try sample HTTP queries
+10- Check the ExampleQueries.txt file to try sample HTTP queries6- Open SystemParameters.txt file and set the configurations as you wish 
+7- Clean and install KnowledgeBaseServer with Maven
+8- Run it as a SpringBoot app (mvn spring-boot:run)
+9- Check the ExampleQueries.txt file to try sample HTTP queries
