@@ -1,0 +1,10 @@
+knowledgeserver_port 8015
+hsqldb_port 9001
+hsqldb_dbname mainDB
+hsqldb_username sa
+hsqldb_password  
+hsqldb_directory file:\D:\csst\trunk\projects\FIWARE\KnowledgeBase\KnowledgeBaseServer\SQL_database\mainDB
+sparql_port 3030
+sparql_URL http://localhost
+subscribe_time_interval_seconds 60
+max_cache_entries 1000

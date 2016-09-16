@@ -1,0 +1,959 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY NGSI "http://www.semanticweb.org/neclab/smartsantander/NGSI#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:NGSI="http://www.semanticweb.org/neclab/smartsantander/NGSI#">
+    <Ontology rdf:about="http://www.semanticweb.org/neclab/smartsantander/NGSI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasAltitude -->
+
+    <ObjectProperty rdf:about="&NGSI;hasAltitude">
+        <rdfs:range rdf:resource="&NGSI;Altitude"/>
+        <rdfs:domain rdf:resource="&NGSI;MovingSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasAtmosphericPressure -->
+
+    <ObjectProperty rdf:about="&NGSI;hasAtmosphericPressure">
+        <rdfs:domain rdf:resource="&NGSI;Env_stationSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Pressure"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasBattery -->
+
+    <ObjectProperty rdf:about="&NGSI;hasBattery">
+        <rdfs:range rdf:resource="&NGSI;Battery"/>
+        <rdfs:domain rdf:resource="&NGSI;Node"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasCount -->
+
+    <ObjectProperty rdf:about="&NGSI;hasCount">
+        <rdfs:range rdf:resource="&NGSI;Count"/>
+        <rdfs:domain rdf:resource="&NGSI;RoadSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasCourse -->
+
+    <ObjectProperty rdf:about="&NGSI;hasCourse">
+        <rdfs:range rdf:resource="&NGSI;Course"/>
+        <rdfs:domain rdf:resource="&NGSI;MovingSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasDistrict -->
+
+    <ObjectProperty rdf:about="&NGSI;hasDistrict">
+        <rdfs:range rdf:resource="&NGSI;District"/>
+        <rdfs:domain rdf:resource="&NGSI;Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasGroundTemperature -->
+
+    <ObjectProperty rdf:about="&NGSI;hasGroundTemperature">
+        <rdfs:domain rdf:resource="&NGSI;IrrigationSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Temperature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasLatitude -->
+
+    <ObjectProperty rdf:about="&NGSI;hasLatitude">
+        <rdfs:range rdf:resource="&NGSI;Latitude"/>
+        <rdfs:domain rdf:resource="&NGSI;Node"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasLight -->
+
+    <ObjectProperty rdf:about="&NGSI;hasLight">
+        <rdfs:range rdf:resource="&NGSI;Light"/>
+        <rdfs:domain rdf:resource="&NGSI;LightSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasLongitude -->
+
+    <ObjectProperty rdf:about="&NGSI;hasLongitude">
+        <rdfs:range rdf:resource="&NGSI;Longitude"/>
+        <rdfs:domain rdf:resource="&NGSI;Node"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasNoise -->
+
+    <ObjectProperty rdf:about="&NGSI;hasNoise">
+        <rdfs:range rdf:resource="&NGSI;Noise"/>
+        <rdfs:domain rdf:resource="&NGSI;NoiseSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasOccupancy -->
+
+    <ObjectProperty rdf:about="&NGSI;hasOccupancy">
+        <rdfs:range rdf:resource="&NGSI;Occupancy"/>
+        <rdfs:domain rdf:resource="&NGSI;RoadSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasOdometer -->
+
+    <ObjectProperty rdf:about="&NGSI;hasOdometer">
+        <rdfs:range rdf:resource="&NGSI;Distance"/>
+        <rdfs:domain rdf:resource="&NGSI;MovingSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasRadiationPAR -->
+
+    <ObjectProperty rdf:about="&NGSI;hasRadiationPAR">
+        <rdfs:domain rdf:resource="&NGSI;Env_stationSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Radiation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasRainfall -->
+
+    <ObjectProperty rdf:about="&NGSI;hasRainfall">
+        <rdfs:domain rdf:resource="&NGSI;Env_stationSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Rainfall"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasRelativeHumidity -->
+
+    <ObjectProperty rdf:about="&NGSI;hasRelativeHumidity">
+        <rdfs:domain rdf:resource="&NGSI;AgricultureSensor"/>
+        <rdfs:range rdf:resource="&NGSI;RelativeHumidity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasSection -->
+
+    <ObjectProperty rdf:about="&NGSI;hasSection">
+        <rdfs:domain rdf:resource="&NGSI;Node"/>
+        <rdfs:range rdf:resource="&NGSI;Section"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasSoilMoistureTension -->
+
+    <ObjectProperty rdf:about="&NGSI;hasSoilMoistureTension">
+        <rdfs:domain rdf:resource="&NGSI;IrrigationSensor"/>
+        <rdfs:range rdf:resource="&NGSI;SoilMoistureTension"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasSolarRadiation -->
+
+    <ObjectProperty rdf:about="&NGSI;hasSolarRadiation">
+        <rdfs:domain rdf:resource="&NGSI;Env_stationSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Radiation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasSpeed -->
+
+    <ObjectProperty rdf:about="&NGSI;hasSpeed">
+        <rdfs:domain rdf:resource="&NGSI;MovingSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Speed"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasStatus -->
+
+    <ObjectProperty rdf:about="&NGSI;hasStatus">
+        <rdfs:domain rdf:resource="&NGSI;ParkingSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Status"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasTemperature -->
+
+    <ObjectProperty rdf:about="&NGSI;hasTemperature">
+        <rdfs:domain rdf:resource="&NGSI;TempSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Temperature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasWindDirection -->
+
+    <ObjectProperty rdf:about="&NGSI;hasWindDirection">
+        <rdfs:range rdf:resource="&NGSI;Direction"/>
+        <rdfs:domain rdf:resource="&NGSI;Env_stationSensor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasWindSpeed -->
+
+    <ObjectProperty rdf:about="&NGSI;hasWindSpeed">
+        <rdfs:domain rdf:resource="&NGSI;Env_stationSensor"/>
+        <rdfs:range rdf:resource="&NGSI;Speed"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasAltitudeValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasAltitudeValue">
+        <rdfs:domain rdf:resource="&NGSI;Altitude"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasCountValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasCountValue">
+        <rdfs:domain rdf:resource="&NGSI;Count"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasCourseValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasCourseValue">
+        <rdfs:domain rdf:resource="&NGSI;Course"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasDirectionValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasDirectionValue">
+        <rdfs:domain rdf:resource="&NGSI;Direction"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasDistanceValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasDistanceValue">
+        <rdfs:domain rdf:resource="&NGSI;Distance"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasDistrictValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasDistrictValue">
+        <rdfs:domain rdf:resource="&NGSI;District"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasLightValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasLightValue">
+        <rdfs:domain rdf:resource="&NGSI;Light"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasMetadataKey -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasMetadataKey">
+        <rdfs:domain rdf:resource="&NGSI;Metadata"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasMetadataName -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasMetadataName">
+        <rdfs:domain rdf:resource="&NGSI;Metadata"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasMetadataType -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasMetadataType">
+        <rdfs:domain rdf:resource="&NGSI;Metadata"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasMetadataValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasMetadataValue">
+        <rdfs:domain rdf:resource="&NGSI;Metadata"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasNoiseValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasNoiseValue">
+        <rdfs:domain rdf:resource="&NGSI;Noise"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasOccupancyValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasOccupancyValue">
+        <rdfs:domain rdf:resource="&NGSI;Occupancy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasPressureValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasPressureValue">
+        <rdfs:domain rdf:resource="&NGSI;Pressure"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasRadiationValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasRadiationValue">
+        <rdfs:domain rdf:resource="&NGSI;Radiation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasRainfallValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasRainfallValue">
+        <rdfs:domain rdf:resource="&NGSI;Rainfall"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasRelativeHumidityValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasRelativeHumidityValue">
+        <rdfs:domain rdf:resource="&NGSI;RelativeHumidity"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasSectionValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasSectionValue">
+        <rdfs:domain rdf:resource="&NGSI;Section"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasSoilMoistureTensionValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasSoilMoistureTensionValue">
+        <rdfs:domain rdf:resource="&NGSI;SoilMoistureTension"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasSpeedValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasSpeedValue">
+        <rdfs:domain rdf:resource="&NGSI;Speed"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasStatusValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasStatusValue">
+        <rdfs:domain rdf:resource="&NGSI;Status"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#hasTemperatureValue -->
+
+    <DatatypeProperty rdf:about="&NGSI;hasTemperatureValue">
+        <rdfs:domain rdf:resource="&NGSI;Temperature"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#AgricultureSensor -->
+
+    <Class rdf:about="&NGSI;AgricultureSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+        <rdfs:subClassOf rdf:resource="&NGSI;TempSensor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Altitude -->
+
+    <Class rdf:about="&NGSI;Altitude">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#AttributeType -->
+
+    <Class rdf:about="&NGSI;AttributeType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Battery -->
+
+    <Class rdf:about="&NGSI;Battery">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#BusSensor -->
+
+    <Class rdf:about="&NGSI;BusSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;MovingSensor"/>
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Count -->
+
+    <Class rdf:about="&NGSI;Count">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Course -->
+
+    <Class rdf:about="&NGSI;Course">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Direction -->
+
+    <Class rdf:about="&NGSI;Direction">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Distance -->
+
+    <Class rdf:about="&NGSI;Distance">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#District -->
+
+    <Class rdf:about="&NGSI;District">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#EntityType -->
+
+    <Class rdf:about="&NGSI;EntityType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Env_stationSensor -->
+
+    <Class rdf:about="&NGSI;Env_stationSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;IrrigationSensor"/>
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#IrrigationSensor -->
+
+    <Class rdf:about="&NGSI;IrrigationSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;AgricultureSensor"/>
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Latitude -->
+
+    <Class rdf:about="&NGSI;Latitude">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Light -->
+
+    <Class rdf:about="&NGSI;Light">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#LightSensor -->
+
+    <Class rdf:about="&NGSI;LightSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+        <rdfs:subClassOf rdf:resource="&NGSI;TempSensor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Longitude -->
+
+    <Class rdf:about="&NGSI;Longitude">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Metadata -->
+
+    <Class rdf:about="&NGSI;Metadata"/>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#MovingSensor -->
+
+    <Class rdf:about="&NGSI;MovingSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+        <rdfs:subClassOf rdf:resource="&NGSI;TempSensor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Node -->
+
+    <Class rdf:about="&NGSI;Node">
+        <rdfs:subClassOf rdf:resource="&NGSI;EntityType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Noise -->
+
+    <Class rdf:about="&NGSI;Noise">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#NoiseSensor -->
+
+    <Class rdf:about="&NGSI;NoiseSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Occupancy -->
+
+    <Class rdf:about="&NGSI;Occupancy">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#ParkingSensor -->
+
+    <Class rdf:about="&NGSI;ParkingSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Pressure -->
+
+    <Class rdf:about="&NGSI;Pressure">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Radiation -->
+
+    <Class rdf:about="&NGSI;Radiation">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Rainfall -->
+
+    <Class rdf:about="&NGSI;Rainfall">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#RelativeHumidity -->
+
+    <Class rdf:about="&NGSI;RelativeHumidity">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#RoadSensor -->
+
+    <Class rdf:about="&NGSI;RoadSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Section -->
+
+    <Class rdf:about="&NGSI;Section">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#SoilMoistureTension -->
+
+    <Class rdf:about="&NGSI;SoilMoistureTension">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Speed -->
+
+    <Class rdf:about="&NGSI;Speed">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Status -->
+
+    <Class rdf:about="&NGSI;Status">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#TempSensor -->
+
+    <Class rdf:about="&NGSI;TempSensor">
+        <rdfs:subClassOf rdf:resource="&NGSI;Node"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#Temperature -->
+
+    <Class rdf:about="&NGSI;Temperature">
+        <rdfs:subClassOf rdf:resource="&NGSI;AttributeType"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#AltitudeMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;AltitudeMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataValue>meter</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataKey>Altitude</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#BatteryMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;BatteryMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataKey>Battery</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataValue>percentage</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#CourseMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;CourseMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataKey>Course</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataValue>degree</NGSI:hasMetadataValue>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#DateMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;DateMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataKey>ALL</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataValue>&lt;date&gt;</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataName>date</NGSI:hasMetadataName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#DistanceMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;DistanceMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataValue>kilometer</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataKey>Distance</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#LatitudeMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;LatitudeMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataValue>decimal degree</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataKey>Latitude</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#LightMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;LightMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataKey>Light</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataValue>lux</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#LongitudeMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;LongitudeMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataKey>Longitude</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataValue>decimal degree</NGSI:hasMetadataValue>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#NoiseMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;NoiseMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataKey>Noise</NGSI:hasMetadataKey>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#PressureMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;PressureMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataValue>Kilopascal</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataKey>Pressure</NGSI:hasMetadataKey>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#RadiationMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;RadiationMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataValue>watts per squaremeter</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataKey>Radiation</NGSI:hasMetadataKey>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#RainfallMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;RainfallMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataKey>Rainfall</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataValue>millimeter</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#RelativeHumidityMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;RelativeHumidityMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataValue>percentage</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataKey>RelativeHumidity</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#SoilMoistureTensionMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;SoilMoistureTensionMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataKey>SoilMoistureTension</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataValue>centibar</NGSI:hasMetadataValue>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#SpeedMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;SpeedMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataValue>kilometer per hour</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+        <NGSI:hasMetadataType>xsd:string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataKey>Speed</NGSI:hasMetadataKey>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/neclab/smartsantander/NGSI#TemperatureMetadata -->
+
+    <NamedIndividual rdf:about="&NGSI;TemperatureMetadata">
+        <rdf:type rdf:resource="&NGSI;Metadata"/>
+        <NGSI:hasMetadataType>string</NGSI:hasMetadataType>
+        <NGSI:hasMetadataKey>Temperature</NGSI:hasMetadataKey>
+        <NGSI:hasMetadataValue>Celsius</NGSI:hasMetadataValue>
+        <NGSI:hasMetadataName>unit</NGSI:hasMetadataName>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

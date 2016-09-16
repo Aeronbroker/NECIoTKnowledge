@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/neclab/smartsantander/NGSI"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/neclab/smartsantander/NGSI">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AgricultureSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Altitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttributeType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Battery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Direction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Distance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EntityType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Env_stationSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IrrigationSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Light"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovingSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Node"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Noise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoiseSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Radiation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rainfall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelativeHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoilMoistureTension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TempSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAltitude"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCourse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGroundTemperature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLight"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNoise"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOdometer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPosition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRadiationPAR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRainfall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelativeHumidity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSoilMoistureTension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSolarRadiation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTemperature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWindDirection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWindSpeed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAltitudeValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCourseValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDirectionValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDistanceValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLightValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetadataName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetadataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetadataValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNoiseValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPositionValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPressureValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRadiationValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRainfallValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRelativeHumidityValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSoilMoistureTensionValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpeedValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTemperatureValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DateMetadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PositionMetadata"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AgricultureSensor"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AgricultureSensor"/>
+        <Class IRI="#TempSensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Altitude"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Battery"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Course"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Direction"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distance"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Env_stationSensor"/>
+        <Class IRI="#IrrigationSensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Env_stationSensor"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrrigationSensor"/>
+        <Class IRI="#AgricultureSensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IrrigationSensor"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Light"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LightSensor"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LightSensor"/>
+        <Class IRI="#TempSensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovingSensor"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovingSensor"/>
+        <Class IRI="#TempSensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Node"/>
+        <Class IRI="#EntityType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Noise"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoiseSensor"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Position"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pressure"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radiation"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rainfall"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelativeHumidity"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoilMoistureTension"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speed"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TempSensor"/>
+        <Class IRI="#Node"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class IRI="#AttributeType"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Metadata"/>
+        <NamedIndividual IRI="#DateMetadata"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMetadataName"/>
+        <NamedIndividual IRI="#DateMetadata"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">date</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMetadataType"/>
+        <NamedIndividual IRI="#DateMetadata"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMetadataValue"/>
+        <NamedIndividual IRI="#DateMetadata"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">&lt;date&gt;</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMetadataName"/>
+        <NamedIndividual IRI="#PositionMetadata"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">location</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMetadataType"/>
+        <NamedIndividual IRI="#PositionMetadata"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMetadataValue"/>
+        <NamedIndividual IRI="#PositionMetadata"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">WGS84</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSpeed"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAltitude"/>
+        <Class IRI="#MovingSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+        <Class IRI="#Env_stationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCourse"/>
+        <Class IRI="#MovingSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGroundTemperature"/>
+        <Class IRI="#IrrigationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLight"/>
+        <Class IRI="#LightSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNoise"/>
+        <Class IRI="#NoiseSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOdometer"/>
+        <Class IRI="#MovingSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPosition"/>
+        <Class IRI="#EntityType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRadiationPAR"/>
+        <Class IRI="#Env_stationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRainfall"/>
+        <Class IRI="#Env_stationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelativeHumidity"/>
+        <Class IRI="#AgricultureSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSoilMoistureTension"/>
+        <Class IRI="#IrrigationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSolarRadiation"/>
+        <Class IRI="#Env_stationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpeed"/>
+        <Class IRI="#MovingSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTemperature"/>
+        <Class IRI="#TempSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWindDirection"/>
+        <Class IRI="#Env_stationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWindSpeed"/>
+        <Class IRI="#Env_stationSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAltitude"/>
+        <Class IRI="#Altitude"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+        <Class IRI="#Pressure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCourse"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGroundTemperature"/>
+        <Class IRI="#Temperature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLight"/>
+        <Class IRI="#Light"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNoise"/>
+        <Class IRI="#Noise"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOdometer"/>
+        <Class IRI="#Distance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPosition"/>
+        <Class IRI="#Position"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRadiationPAR"/>
+        <Class IRI="#Radiation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRainfall"/>
+        <Class IRI="#Rainfall"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelativeHumidity"/>
+        <Class IRI="#RelativeHumidity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSoilMoistureTension"/>
+        <Class IRI="#SoilMoistureTension"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSolarRadiation"/>
+        <Class IRI="#Radiation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSpeed"/>
+        <Class IRI="#Speed"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTemperature"/>
+        <Class IRI="#Temperature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWindDirection"/>
+        <Class IRI="#Direction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWindSpeed"/>
+        <Class IRI="#Speed"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAltitudeValue"/>
+        <Class IRI="#Altitude"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCourseValue"/>
+        <Class IRI="#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDirectionValue"/>
+        <Class IRI="#Direction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDistanceValue"/>
+        <Class IRI="#Distance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLightValue"/>
+        <Class IRI="#Light"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetadataName"/>
+        <Class IRI="#Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetadataType"/>
+        <Class IRI="#Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetadataValue"/>
+        <Class IRI="#Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNoiseValue"/>
+        <Class IRI="#Noise"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPositionValue"/>
+        <Class IRI="#Position"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPressureValue"/>
+        <Class IRI="#Pressure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRadiationValue"/>
+        <Class IRI="#Radiation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRainfallValue"/>
+        <Class IRI="#Rainfall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRelativeHumidityValue"/>
+        <Class IRI="#RelativeHumidity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSoilMoistureTensionValue"/>
+        <Class IRI="#SoilMoistureTension"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSpeedValue"/>
+        <Class IRI="#Speed"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTemperatureValue"/>
+        <Class IRI="#Temperature"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAltitudeValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCourseValue"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDirectionValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDistanceValue"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLightValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetadataName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetadataType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetadataValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNoiseValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPositionValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPressureValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRadiationValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRainfallValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRelativeHumidityValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSoilMoistureTensionValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpeedValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTemperatureValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
