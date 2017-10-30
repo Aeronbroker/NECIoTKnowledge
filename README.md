@@ -1,7 +1,7 @@
-# NECKnowledgeBase
-Knowledge Base server for enabling semantic functionalities.
+# NEC IoT Knowledge
+NEC IoT Knowledge server for enabling semantic functionalities.
 
-Steps to use the Knowledge Base Server:
+Steps to use the IoT Knowledge Server:
 ---
 
 1. Download the latest version of Apache Fuseki (tested with Fuseki 2.4.0)
